@@ -72,7 +72,7 @@ export default class App extends Component {
                     </canvas>
                     */}
                     <p style={styles.canvasText}>
-                        Hey, I'm <span style={styles.canvasTextName}>Michael Guldborg</span><br/>
+                        Hi, I'm <span style={styles.canvasTextName}>Michael Guldborg</span><br/>
                         I'm a full-stack web developer!
                     </p>
                 </div>
