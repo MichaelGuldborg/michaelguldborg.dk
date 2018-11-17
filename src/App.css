@@ -1,0 +1,50 @@
+
+button {
+    margin-left: 10px;
+}
+
+TextField {
+    margin-left: 20px;
+}
+
+#heroBackgroundContainer {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#heroBackground {
+    width: calc(100vw + 30vw);
+    height: 86vw;
+    background-image: linear-gradient(315deg, #0ca399, #54ca88);
+    -webkit-transform: rotate(332.5deg);
+    -ms-transform: rotate(332.5deg);
+    transform: rotate(332.5deg);
+    -webkit-transform-origin: -30vw 80vw;
+    -ms-transform-origin: -30vw 80vw;
+    transform-origin: -30vw 80vw;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navigation-container {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 20px;
+    flex: 1;
+    flex-direction: row;
+}
+
+
+
