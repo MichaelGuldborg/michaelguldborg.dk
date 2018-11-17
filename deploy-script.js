@@ -19,6 +19,8 @@ for (const [field, value] of entries(config)) {
     }
 }
 
+return;
+
 console.log("Starting deploy to Git...");
 
 console.log("Pulling production repository to \"" + config.git_folder + "\" folder...");
