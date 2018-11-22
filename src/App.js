@@ -24,15 +24,21 @@ export default class App extends Component {
 
     componentDidMount() {
 
-        //const canvasElement = document.getElementById("canvas");
-        //this.setCanvasSize(canvasElement);
-        //let canvasHandler = CanvasHandler.initCanvasHandler(canvasElement);
-        //canvasHandler.initParticles(30);
-        //canvasHandler.startAnimation(canvasHandler);
+        const canvas = document.getElementById("canvas");
+        App.setCanvasSize(canvas);
 
+        const context = canvas.getContext('2d');
+        const width = canvas.width;
+        const height = canvas.height;
+        context.strokeStyle = '#000';
+        const drawMap = function () {
+            context.clearRect(0, 0, width, height);
+            context.fillStyle = 'rgb(255,0,0)';
+        };
+        setInterval(drawMap, 1000 / 30);
     }
 
-    setCanvasSize(canvas) {
+    static setCanvasSize(canvas) {
         const displayWidth = window.document.body.clientWidth; //canvas.clientWidth;
         const displayHeight = canvas.clientHeight;
 
@@ -49,30 +55,12 @@ export default class App extends Component {
                     <img className="logo-image hover-shadow" src={images.logo} alt={"logo"}/>
                 </a>
 
-                {/*
-                <div style={styles.topRightContainer}>
-                    <Link className={"link"} to={routes.admin}>
-                        <Button style={styles.button} onClick={() => console.log("Pressed admin button")}>
-                            Admin
-                        </Button>
-                    </Link>
-                </div>
-                */}
-
-
-                {/*
-                <div id={"heroBackgroundContainer"}>
-                    <div id={"heroBackground"}></div>
-                </div>
-                */}
                 <div id={"canvasContainer"} style={styles.canvasContainer}>
-                    {/*
                     <canvas id={"canvas"} style={styles.canvas}>
-                        fallback
+                        {/*fallback*/}
                     </canvas>
-                    */}
                     <p style={styles.canvasText}>
-                        Hi, I'm <span style={styles.canvasTextName}>Michael Guldborg</span><br/>
+                        Hey, I'm <span style={styles.canvasTextName}>Michael Guldborg</span><br/>
                         I'm a full-stack web developer!
                     </p>
                 </div>
@@ -107,12 +95,12 @@ export default class App extends Component {
                         <PortfolioCard
                             title={"Desktop Java Game"}
                             subtitle={"Gorillas.jar"}
-                            url={assets.gorillas} //"assets/Gorillas.jar"
+                            url={assets.gorillas}
                             image={images.gorillas}/>
                         <PortfolioCard
                             title={"Discrete Math Calculator"}
                             subtitle={"DenDiskreteMaskine.jar"}
-                            url={assets.discrete_math_calc} //"assets/Gorillas.jar"
+                            url={assets.discrete_math_calc}
                             image={images.discrete_math_calc}/>
                     </Grid>
                 </div>
