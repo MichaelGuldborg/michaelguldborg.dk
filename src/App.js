@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
+
 import './App.css';
+import assets from "./constants/assets";
 import images from "./constants/images";
 import Grid from "@material-ui/core/Grid/Grid";
 import PortfolioCard from "./components/PortfolioCard";
-import assets from "./constants/assets";
-
 //ui components
 //https://material-ui.com/demos/buttons/
 
@@ -25,11 +25,12 @@ export default class App extends Component {
     componentDidMount() {
 
         const canvas = document.getElementById("canvas");
-        App.setCanvasSize(canvas);
+        this.setCanvasSize(canvas);
 
         const context = canvas.getContext('2d');
         const width = canvas.width;
         const height = canvas.height;
+
         context.strokeStyle = '#000';
         const drawMap = function () {
             context.clearRect(0, 0, width, height);
@@ -38,7 +39,7 @@ export default class App extends Component {
         setInterval(drawMap, 1000 / 30);
     }
 
-    static setCanvasSize(canvas) {
+    setCanvasSize(canvas) {
         const displayWidth = window.document.body.clientWidth; //canvas.clientWidth;
         const displayHeight = canvas.clientHeight;
 
@@ -55,8 +56,8 @@ export default class App extends Component {
                     <img className="logo-image hover-shadow" src={images.logo} alt={"logo"}/>
                 </a>
 
-                <div id={"canvasContainer"} style={styles.canvasContainer}>
-                    <canvas id={"canvas"} style={styles.canvas}>
+                <div style={styles.canvasContainer}>
+                    <canvas id="canvas" style={styles.canvas}>
                         {/*fallback*/}
                     </canvas>
                     <p style={styles.canvasText}>
