@@ -4,6 +4,7 @@ import App from './App';
 import AdminApp from "./AdminApp";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import routes from "./constants/routes";
+import "./api/GAService";
 
 ReactDOM.render(
     <BrowserRouter>
