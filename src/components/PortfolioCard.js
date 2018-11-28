@@ -22,7 +22,7 @@ export default class PortfolioCard extends React.Component {
 
         return (
             <a className={"link"} href={url}>
-                <Card className={"PortfolioCard"}>
+                <div className={"PortfolioCard"}>
                     <img style={styles.image}
                          alt={""}
                          src={imageUrl}/>
@@ -33,7 +33,7 @@ export default class PortfolioCard extends React.Component {
                             {description}
                         </span>
                     </div>
-                </Card>
+                </div>
             </a>
         )
     }
@@ -54,7 +54,8 @@ const styles = {
         borderRadius: '3px',
     },
     textContainer: {
-        padding: '10px',
+        paddingTop: '5px',
+        paddingBottom: '10px',
         backgroundColor: "inherit"
     }
 }

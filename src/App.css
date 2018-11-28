@@ -3,10 +3,6 @@ button {
     margin-left: 10px;
 }
 
-TextField {
-    margin-left: 20px;
-}
-
 #heroBackgroundContainer {
     width: 100%;
     overflow: hidden;

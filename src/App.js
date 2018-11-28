@@ -60,8 +60,8 @@ export default class App extends Component {
                         {/*fallback*/}
                     </canvas>
                     <p style={styles.canvasText}>
-                        Hey, I'm <span style={styles.canvasTextName}>Michael Guldborg</span><br/>
-                        I'm a full-stack web developer!
+                        Hey, I'm Michael Guldborg<br/>
+                        I'm an android app developer!
                     </p>
                 </div>
 
@@ -74,7 +74,7 @@ export default class App extends Component {
                         marginLeft: '-100%',
                         marginRight: '-100%'
                     }}>
-                        PORTFOLIO
+                        Portfolio
                     </h1>
                     <Grid container spacing={32} style={styles.container}>
                         <PortfolioCard
@@ -134,12 +134,8 @@ const styles = {
         margin: "0px",
         paddingBottom: "80px",
         textAlign: 'center',
-        fontFamily: 'Roboto',
         fontSize: '40px',
         fontWeight: 'Medium',
-    },
-    canvasTextName: {
-        color: '#E4436D',
     },
     container: {
         display: 'flex',
