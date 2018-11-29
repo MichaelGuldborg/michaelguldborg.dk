@@ -16,16 +16,27 @@ export default class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            opacity: 1,
-        }
-
     }
 
     componentDidMount() {
 
+        //wave canvas
+        this.initWaveCanvas();
+
+
+        /*
         const canvas = document.getElementById("canvas");
         this.setCanvasSize(canvas);
+
+        setCanvasSize(canvas) {
+            const displayWidth = window.document.body.clientWidth; //canvas.clientWidth;
+            const displayHeight = canvas.clientHeight;
+
+            if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
+                canvas.width = displayWidth;
+                canvas.height = displayHeight;
+            }
+        }
 
         const context = canvas.getContext('2d');
         const width = canvas.width;
@@ -36,47 +47,89 @@ export default class App extends Component {
             context.clearRect(0, 0, width, height);
             context.fillStyle = 'rgb(255,0,0)';
         };
-        setInterval(drawMap, 1000 / 30);
+        //setInterval(drawMap, 1000 / 30);
+        */
     }
 
-    setCanvasSize(canvas) {
-        const displayWidth = window.document.body.clientWidth; //canvas.clientWidth;
-        const displayHeight = canvas.clientHeight;
+    initWaveCanvas() {
 
-        if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
-            canvas.width = displayWidth;
-            canvas.height = displayHeight;
+        //https://codepen.io/sebavien/pen/WGGmEo?editors=0010
+
+        const wavecvs = document.getElementById("waveCanvas");
+        wavecvs.width = document.documentElement.clientWidth;
+        wavecvs.height = 300;
+
+        const wavectx = wavecvs.getContext("2d");
+        const height = wavecvs.height;
+        const width = wavecvs.width;
+
+        const xAxis = Math.floor(height / 2);
+        const yAxis = 0;
+        const unit = 60;
+
+        function draw() {
+            wavectx.clearRect(0, 0, width, height);// キャンバスの描画をクリア
+            drawWave('#FFFFFF', 1, 3, 0);//波を描画（fillcolor, alpha, zoom, delay）
+
+            // Update the time and draw again
+            draw.seconds = draw.seconds + .009;
+            draw.t = draw.seconds * Math.PI;
+            setTimeout(draw, 35);
+        };
+        draw.seconds = 0;
+        draw.t = 0;
+        draw();
+
+
+        function drawWave(fillcolor, alpha, zoom, delay) {
+            wavectx.fillStyle = fillcolor;
+            wavectx.globalAlpha = alpha;
+
+            wavectx.beginPath(); //パスの開始
+            drawSine(draw.t / 0.5, zoom, delay);
+            wavectx.lineTo(width + 10, height); //パスをCanvasの右下へ
+            wavectx.lineTo(0, height); //パスをCanvasの左下へ
+            wavectx.closePath() //パスを閉じる
+            wavectx.fill(); //塗りつぶす
+        }
+
+        function drawSine(t, zoom, delay) {
+            let x = t; //時間を横の位置とする
+            let y = Math.sin(x) / zoom;
+            wavectx.moveTo(yAxis, unit * y + xAxis); //スタート位置にパスを置く
+
+            // Loop to draw segments (横幅の分、波を描画)
+            for (let i = yAxis; i <= width + 10; i += 10) {
+                x = t + (-yAxis + i) / unit / zoom;
+                y = Math.sin(x - delay) / 3;
+                wavectx.lineTo(i, unit * y + xAxis);
+            }
         }
     }
+
 
     render() {
         return (
             <div>
-                <a href="/">
-                    <img className="logo-image hover-shadow" src={images.logo} alt={"logo"}/>
-                </a>
 
                 <div style={styles.canvasContainer}>
                     <canvas id="canvas" style={styles.canvas}>
                         {/*fallback*/}
                     </canvas>
-                    <p style={styles.canvasText}>
-                        Hey, I'm Michael Guldborg<br/>
-                        I'm an android app developer!
-                    </p>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                        <span style={{
+                            width: '200px', height: '200px', lineHeight: '200px',
+                            textAlign: 'center', color: 'white', fontSize: '80px',
+                            borderRadius: '100%', border: '3px solid white',
+                            marginTop: '-40px', marginBottom: '40px'
+                        }}>MG</span>
+                        <span style={{color: 'white', fontSize: '30px'}}>Professional Android Development</span>
+                    </div>
                 </div>
 
-                <div style={{padding: "40px", paddingBottom: "80px", overflow: 'hidden'}}>
-                    <h1 style={{
-                        textAlign: 'center',
-                        marginTop: "0px",
-                        marginBottom: "40px",
-                        padding: "40px",
-                        marginLeft: '-100%',
-                        marginRight: '-100%'
-                    }}>
-                        Portfolio
-                    </h1>
+                <canvas id="waveCanvas" style={{backgroundColor: '#1e1e23'}}/>
+
+                <div style={{padding: "40px", marginTop: '10vh', paddingBottom: "80px", overflow: 'hidden'}}>
                     <Grid container spacing={32} style={styles.container}>
                         <PortfolioCard
                             title={"Lead Android Developer"}
@@ -122,6 +175,7 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         overflow: 'hidden',
+        backgroundColor: '#1e1e23',
         //background: "#f5f5f5",
     },
     canvas: {
@@ -137,6 +191,10 @@ const styles = {
         textAlign: 'center',
         fontSize: '40px',
         fontWeight: 'Medium',
+    },
+    canvasLogoImage: {
+        width: '16vw',
+        height: '16vw',
     },
     container: {
         display: 'flex',
