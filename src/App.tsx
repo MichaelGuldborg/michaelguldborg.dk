@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+
+        <div style={{
+            background: '#f7f7f7',
+            height: '100vh',
+            width: '100vw',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+        }}>
+            <div style={{
+                position: 'absolute',
+                top: 0,
+                right: 0,
+                padding: 8,
+                color: '#1e1e23',
+                textAlign: 'right',
+                alignItems: 'right',
+            }}>
+                <a
+                    href="mailto:mail@michaelguldborg.dk"
+                    target="_top"
+                    style={{
+                        marginRight: 24,
+                        fontSize: 16,
+                    }}
+                >
+                    mail@michaelguldborg.dk
+                </a>
+            </div>
+            <div style={{
+                color: '#1e1e23',
+                fontSize: 30,
+                textAlign: 'center',
+            }}>
+                <p>Fullstack Developer</p>
+                <p>React, Flutter, Firebase</p>
+            </div>
+        </div>
+    );
 }
 
 export default App;
