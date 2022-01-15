@@ -1,6 +1,7 @@
 import React from 'react';
 import EmailButton from "./components/EmailButton";
 import {ProjectCard} from "./components/ProjectCard";
+import {Grid} from "@mui/material";
 
 function App() {
     return (
@@ -17,7 +18,7 @@ function App() {
                 flexDirection: 'column',
             }}>
                 <div style={{
-                    marginTop: '20vh',
+                    marginTop: '24vh',
                     marginLeft: '10vw',
                 }}>
                     <div style={{
@@ -32,36 +33,46 @@ function App() {
 
 
                 <div style={{
-                    marginTop: '20vh',
+                    marginTop: '24vh',
                     marginLeft: '10vw',
+                    marginRight: '10vw',
                     display: 'flex'
                 }}>
 
-                    {[{
-                        title: 'City Surfing',
-                        company: 'Michael Guldborg',
-                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/citysurfing'
-                    }, {
-                        title: 'Achivement',
-                        company: 'Michael Guldborg',
-                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/achivement'
-                    }, {
-                        title: 'Diti',
-                        company: 'InnoSocial ApS',
-                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/diti'
-                    }, {
-                        title: 'Elastic Stack',
-                        company: 'InnoSocial ApS',
-                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/elastic_stack'
-                    }, {
-                        title: 'Headspace admin',
-                        company: 'InnoSocial ApS',
-                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/headspace_admin'
-                    }, {
-                        title: 'Lead Mobile Developer',
-                        company: 'MinEjendom ApS',
-                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/minejendom'
-                    }].map(p => <ProjectCard key={p.title} project={p}/>)}
+                    <Grid container spacing={4}>
+
+
+                        {[{
+                            title: 'City Surfing',
+                            company: 'Michael Guldborg',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/citysurfing'
+                        }, {
+                            title: 'Achivement',
+                            company: 'Michael Guldborg',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/achivement'
+                        }, {
+                            title: 'Diti',
+                            company: 'InnoSocial ApS',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/diti'
+                        }, {
+                            title: 'Elastic Stack',
+                            company: 'InnoSocial ApS',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/elastic'
+                        }, {
+                            title: 'Headspace admin',
+                            company: 'InnoSocial ApS',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/headspace_admin'
+                        }, {
+                            title: 'Lead Mobile Developer',
+                            company: 'MinEjendom ApS',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/minejendom'
+                        }].map(p => {
+                            return <Grid item xl={2} lg={3} md={4} xs={12}>
+                                <ProjectCard key={p.title} project={p}/>
+                            </Grid>
+                        })}
+                    </Grid>
+
                 </div>
 
             </div>

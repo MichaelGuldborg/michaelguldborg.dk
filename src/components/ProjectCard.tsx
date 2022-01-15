@@ -27,7 +27,6 @@ export const ProjectCard: React.FC<{
                 paddingLeft: 8,
                 paddingTop: 8,
                 paddingRight: 8,
-                marginRight: 32,
                 borderRadius: 4,
                 border: '1px solid #D3DAE6',
                 // boxShadow: '0 2px 2px -1px rgb(152 162 179 / 30%), 0 1px 5px -2px rgb(152 162 179 / 30%)',
