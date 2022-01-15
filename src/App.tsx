@@ -1,47 +1,85 @@
 import React from 'react';
+import EmailButton from "./components/EmailButton";
+import {ProjectCard} from "./components/ProjectCard";
 
 function App() {
     return (
 
-        <div style={{
-            background: '#f7f7f7',
-            height: '100vh',
-            width: '100vw',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-        }}>
+        <div>
+
+            <EmailButton/>
+
             <div style={{
-                position: 'absolute',
-                top: 0,
-                right: 0,
-                padding: 8,
-                color: '#1e1e23',
-                textAlign: 'right',
-                alignItems: 'right',
+                background: '#f7f7f7',
+                height: '100vh',
+                width: '100vw',
+                display: 'flex',
+                flexDirection: 'column',
             }}>
-                <a
-                    href="mailto:mail@michaelguldborg.dk"
-                    target="_top"
-                    style={{
-                        marginRight: 24,
-                        fontSize: 16,
-                    }}
-                >
-                    mail@michaelguldborg.dk
-                </a>
+                <div style={{
+                    marginTop: '20vh',
+                    marginLeft: '10vw',
+                }}>
+                    <div style={{
+                        color: '#1e1e23',
+                        fontSize: 30,
+                    }}>
+                        <p>Fullstack Developer</p>
+                        <p>React, Flutter, Firebase</p>
+                    </div>
+
+                </div>
+
+
+                <div style={{
+                    marginTop: '20vh',
+                    marginLeft: '10vw',
+                    display: 'flex'
+                }}>
+
+                    <ProjectCard
+                        project={{
+                            title: 'City Surfing',
+                            company: 'Michael Guldborg',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/citysurfing'
+                        }}
+                    />
+                    <ProjectCard
+                        project={{
+                            title: 'Achivement',
+                            company: 'Michael Guldborg',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/achivement'
+                        }}
+                    />
+                    <ProjectCard
+                        project={{
+                            title: 'Diti',
+                            company: 'InnoSocial ApS',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/diti'
+                        }}
+                    />
+                    <ProjectCard
+                        project={{
+                            title: 'Headspace admin',
+                            company: 'InnoSocial ApS',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/headspace_admin'
+                        }}
+                    />
+                    <ProjectCard
+                        project={{
+                            title: 'Lead Mobile Developer',
+                            company: 'MinEjendom ApS',
+                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/minejendom'
+                        }}
+                    />
+                </div>
+
             </div>
-            <div style={{
-                color: '#1e1e23',
-                fontSize: 30,
-                textAlign: 'center',
-            }}>
-                <p>Fullstack Developer</p>
-                <p>React, Flutter, Firebase</p>
-            </div>
+
         </div>
     );
 }
 
 export default App;
+
+
