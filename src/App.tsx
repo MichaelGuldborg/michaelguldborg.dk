@@ -37,41 +37,31 @@ function App() {
                     display: 'flex'
                 }}>
 
-                    <ProjectCard
-                        project={{
-                            title: 'City Surfing',
-                            company: 'Michael Guldborg',
-                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/citysurfing'
-                        }}
-                    />
-                    <ProjectCard
-                        project={{
-                            title: 'Achivement',
-                            company: 'Michael Guldborg',
-                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/achivement'
-                        }}
-                    />
-                    <ProjectCard
-                        project={{
-                            title: 'Diti',
-                            company: 'InnoSocial ApS',
-                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/diti'
-                        }}
-                    />
-                    <ProjectCard
-                        project={{
-                            title: 'Headspace admin',
-                            company: 'InnoSocial ApS',
-                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/headspace_admin'
-                        }}
-                    />
-                    <ProjectCard
-                        project={{
-                            title: 'Lead Mobile Developer',
-                            company: 'MinEjendom ApS',
-                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/minejendom'
-                        }}
-                    />
+                    {[{
+                        title: 'City Surfing',
+                        company: 'Michael Guldborg',
+                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/citysurfing'
+                    }, {
+                        title: 'Achivement',
+                        company: 'Michael Guldborg',
+                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/achivement'
+                    }, {
+                        title: 'Diti',
+                        company: 'InnoSocial ApS',
+                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/diti'
+                    }, {
+                        title: 'Elastic Stack',
+                        company: 'InnoSocial ApS',
+                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/elastic_stack'
+                    }, {
+                        title: 'Headspace admin',
+                        company: 'InnoSocial ApS',
+                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/headspace_admin'
+                    }, {
+                        title: 'Lead Mobile Developer',
+                        company: 'MinEjendom ApS',
+                        url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/minejendom'
+                    }].map(p => <ProjectCard key={p.title} project={p}/>)}
                 </div>
 
             </div>
