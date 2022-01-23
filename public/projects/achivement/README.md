@@ -1,9 +1,9 @@
-# Achivement
+# Achievement
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-A ReactJS Progresive Web Application with Firebase Authentication and Firestore hooks.
->This project aims to provide a web based tool for setting life goals. The key featueres are the ability to create and check off a bucket list and create a grand overview of the remaining weeks of your life. 
+A ReactJS Progressive Web Application with Firebase Authentication and Firestore hooks.
+>This hobby project aims to provide web-based tools for setting life goals. The key features are the ability to create and check off a bucket list and create a grand overview of the remaining weeks of your life. 
 
 *Michael Guldborg 2021*
 
