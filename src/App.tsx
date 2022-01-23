@@ -57,7 +57,7 @@ function App() {
                         }, {
                             title: 'Elastic Stack',
                             company: 'InnoSocial ApS',
-                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/elastic'
+//                            url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/elastic'
                         }, {
                             title: 'Headspace admin',
                             company: 'InnoSocial ApS',
