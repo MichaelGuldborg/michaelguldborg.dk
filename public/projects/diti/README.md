@@ -17,7 +17,7 @@
   <a href="#features">Features</a> •
   <a href="#development">Development</a> •
   <a href="#team">Team</a> •
-  <a href="#refferences">Refferences</a>
+  <a href="#refferences">References</a>
 </p>
 
 ## Preview
@@ -74,7 +74,7 @@ $ git push origin master
 - Frontend mobile developer - [Sebastian Tønne](#)
 
 
-## Refferences
+## References
 - --- *Frontend* ---
 - [JavaScript](https://www.javascript.com/)
 - [Typescript](https://www.typescriptlang.org/)

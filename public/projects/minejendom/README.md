@@ -17,7 +17,7 @@
   <a href="#download">Download</a> •
   <a href="#development">Development</a> •
   <a href="#team">Team</a> •
-  <a href="#refferences">Refferences</a>
+  <a href="#refferences">References</a>
 </p>
 
 ## Preview
@@ -115,7 +115,7 @@ https://play.google.com/console/u/0/developers/6558199758608765200/app/497333436
 - Backend developer - [Kristian](#)
 
 
-## Refferences
+## References
 
 - [Flutter](https://flutter.dev/)
 - [Rest API](https://restfulapi.net/)

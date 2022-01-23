@@ -17,7 +17,7 @@
   <a href="#features">Features</a> •
   <a href="#development">Development</a> •
   <a href="#team">Team</a> •
-  <a href="#refferences">Refferences</a>
+  <a href="#refferences">References</a>
 </p>
 
 ## Preview
@@ -70,7 +70,7 @@ $ firebase deploy --only hosting
 - Backend developer - [Nicolai Lassen](https://nmtl.dk/)
 
 
-## Refferences
+## References
 - [JavaScript](https://www.javascript.com/)
 - [Typescript](https://www.typescriptlang.org/)
 - [npm](https://www.npmjs.com/)

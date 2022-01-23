@@ -17,7 +17,7 @@ A ReactJS Progresive Web Application with Firebase Authentication and Firestore 
 	<a href="#Preview">Preview</a> •
 	<a href="#Features">Features</a> •
 	<a href="#Development">Development</a> •
-	<a href="#refferences">Refferences</a>
+	<a href="#refferences">References</a>
 </p>
 
 ## Preview
@@ -57,7 +57,7 @@ $ git push origin master
 ```
 
 
-## Refferences
+## References
 - [GitHub](https://github.com/)
 - [JavaScript](https://www.javascript.com/)
 - [Typescript](https://www.typescriptlang.org/)
