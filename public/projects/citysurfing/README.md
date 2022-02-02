@@ -13,9 +13,9 @@ A mobile app project made with [Flutter](https://flutter.dev).
 ## Preview
 
 <p align="center">
-    <img src="assets/screenshots/screenshot-1.jpg" height="320">
-    <img src="assets/screenshots/screenshot-3.jpg" height="320">
-    <img src="assets/screenshots/screenshot-4.jpg" height="320">
+    <img src="screenshots/screenshot-1.jpg" height="320">
+    <img src="screenshots/screenshot-3.jpg" height="320">
+    <img src="screenshots/screenshot-4.jpg" height="320">
 </p>
 
 ## Download
