@@ -1,6 +1,6 @@
+import React from "react";
 import {Container} from "@mui/material";
 import Logo from "./Logo";
-import {theme} from "../constants/theme";
 import {ContactButton} from "./ContactButton";
 
 
@@ -12,7 +12,6 @@ export const Header: React.FC = () => {
             right:0,
             zIndex: 1000,
         }}>
-
 
             <Container maxWidth={"lg"}>
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>

@@ -29,7 +29,7 @@ export const projects: Project[] = [{
     color: '#ffaf7b',
     gradient: 'linear-gradient(45deg, #d76d77, #ffaf7b)'
 }, {
-    name: 'Diti',
+    name: 'Digitalt Tilgængelig',
     company: 'InnoSocial ApS',
     role: 'Fullstack/React Developer',
     url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/diti',
@@ -45,7 +45,7 @@ export const projects: Project[] = [{
     from: '2019',
     to: '2021',
     color: '#26A95E',
-    gradient: 'linear-gradient(45deg, #06893E 20%, #3CD67C)'
+    gradient: 'linear-gradient(45deg, #06893E, #3CD67C)'
 }, {
     name: 'MinEjendom',
     company: 'MinEjendom ApS',
@@ -54,6 +54,6 @@ export const projects: Project[] = [{
     from: '2018',
     to: 'now',
     color: '#0053cf',
-    gradient: 'linear-gradient(45deg, #003380 20%, #0073EF)',
+    gradient: 'linear-gradient(45deg, #0053cf, #00A3FF)',
 }];
 export default projects;

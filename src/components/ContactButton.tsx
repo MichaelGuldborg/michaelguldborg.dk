@@ -1,8 +1,5 @@
 import {theme} from "../constants/theme";
-import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
-import ArrowRightSFillIcon from "remixicon-react/ArrowRightSFillIcon";
 import ArrowRightSLineIcon from "remixicon-react/ArrowRightSLineIcon";
-import ArrowDropRightLineIcon from "remixicon-react/ArrowDropRightLineIcon";
 
 
 export const ContactButton = () => {

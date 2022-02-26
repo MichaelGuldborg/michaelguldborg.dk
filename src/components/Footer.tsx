@@ -1,4 +1,5 @@
-import {Container, Grid, Link} from "@mui/material";
+import React from "react";
+import {Container, Grid} from "@mui/material";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import MailFillIcon from "remixicon-react/MailFillIcon";
@@ -10,8 +11,9 @@ export const Footer: React.FC = () => {
             background: 'rgb(44, 39, 60)',
             color:'white',
             paddingTop: 24,
-            paddingBottom: 24,
-            padding: 24,
+            paddingLeft: 24,
+            paddingRight: 24,
+            paddingBottom: 40,
         }}>
             <Container maxWidth={"lg"}>
                 <Grid container>
