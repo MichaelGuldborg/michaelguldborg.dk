@@ -2,6 +2,7 @@ import React from "react";
 import {Container} from "@mui/material";
 import Logo from "./Logo";
 import {ContactButton} from "./ContactButton";
+import {Link} from "react-router-dom";
 
 
 export const Header: React.FC = () => {
@@ -9,7 +10,7 @@ export const Header: React.FC = () => {
         <header style={{
             position: 'absolute',
             left: 0,
-            right:0,
+            right: 0,
             zIndex: 1000,
         }}>
 
@@ -21,11 +22,12 @@ export const Header: React.FC = () => {
                         alignItems: 'center',
                     }}>
 
-                        {/*<div style={{marginRight: 32}}>*/}
-                        {/*    <a style={{color: theme.colors.black}}>*/}
-                        {/*        About*/}
-                        {/*    </a>*/}
-                        {/*</div>*/}
+
+                        <div style={{
+                            marginRight: 32,
+                        }}>
+                            <Link to="about">About</Link>
+                        </div>
                         <div>
                             <ContactButton/>
                         </div>
