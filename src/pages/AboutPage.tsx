@@ -45,6 +45,7 @@ export const AboutPage = () => {
                         <img
                             src={'profile.jpg'}
                             style={{
+                                marginTop: 32,
                                 objectFit: 'cover',
                                 width: '80%',
                                 height: '88%',
