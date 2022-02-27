@@ -8,6 +8,7 @@ export const theme = {
         primary: '#0053cf',
         black : 'rgb(30, 30, 35)',
         offWhite: '#f9fafb',
+        backgroundGrey: '#f7f7f7',
         lightGrey: '#f3f5f7',
         borderGrey: '#dfe1e6',
         textGrey: '#8D949F',
