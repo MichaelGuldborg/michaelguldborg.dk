@@ -1,10 +1,11 @@
 import {theme} from "../constants/theme";
 import ArrowRightSLineIcon from "remixicon-react/ArrowRightSLineIcon";
+import {Link} from "react-router-dom";
 
 
 export const ContactButton = () => {
     return (
-        <a href='mailto:mail@michaelguldborg.d'>
+        <Link to='/contact'>
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -22,6 +23,6 @@ export const ContactButton = () => {
                     paddingTop: 2,
                 }}/>
             </div>
-        </a>
+        </Link>
     )
 }

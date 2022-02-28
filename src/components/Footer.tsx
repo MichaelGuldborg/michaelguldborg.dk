@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                             fontWeight: 400,
                             fontSize: 28,
                         }}>
-                            Michael Guldborg
+                            Michael Kaaberbøl Guldborg
                         </h2>
                     </Grid>
                     <Grid item xs={12} md={6}>

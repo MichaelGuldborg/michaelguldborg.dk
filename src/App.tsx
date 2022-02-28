@@ -4,7 +4,8 @@ import {LandingPage} from "./pages/landing/LandingPage";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
+import ContactPage from "./pages/contact/ContactPage";
+import {SnackbarProvider} from "notistack";
 
 //https://nmtl.dk/
 //https://lassedyrholm.dk/
@@ -15,18 +16,19 @@ import ContactPage from "./pages/ContactPage";
 
 function App() {
     return (
-
-        <div>
-            <BrowserRouter>
-                <Header/>
-                <Routes>
-                    <Route path="/" element={<LandingPage/>}/>
-                    <Route path="about" element={<AboutPage/>}/>
-                    <Route path="contact" element={<ContactPage/>}/>
-                </Routes>
-                <Footer/>
-            </BrowserRouter>
-        </div>
+        <SnackbarProvider maxSnack={3}>
+            <div>
+                <BrowserRouter>
+                    <Header/>
+                    <Routes>
+                        <Route path="/" element={<LandingPage/>}/>
+                        <Route path="about" element={<AboutPage/>}/>
+                        <Route path="contact" element={<ContactPage/>}/>
+                    </Routes>
+                    <Footer/>
+                </BrowserRouter>
+            </div>
+        </SnackbarProvider>
     );
 }
 

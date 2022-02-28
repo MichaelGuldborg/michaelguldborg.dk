@@ -5,8 +5,7 @@ export const Logo = () => {
     return (
         <Link to={'/'} style={{textDecoration: 'none'}}>
             <h2 style={{fontSize: 28, fontWeight: 400,}}>
-                Michael Guldborg
-                {/*<span style={{color: 'rgb(255, 104, 95)', fontWeight: 900}}>.</span>*/}
+                <img src={'/logo192.png'} alt={'Logo'} width={80}/>
             </h2>
         </Link>
     )

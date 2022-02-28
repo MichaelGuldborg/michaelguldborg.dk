@@ -1,0 +1,10 @@
+[build]
+    command = "yarn build"
+    publish = "build"
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+    cache-control = '''
+        max-age=0,
+        must-revalidate'''
