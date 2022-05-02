@@ -20,7 +20,7 @@ export const projects: Project[] = [{
     color: '#57c4a3',
     gradient: 'linear-gradient(45deg, #4697a1, #68dea0)',
 }, {
-    name: 'Achivement',
+    name: 'Achievement',
     company: 'Private',
     role: 'Fullstack/React Developer',
     url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/achivement',
