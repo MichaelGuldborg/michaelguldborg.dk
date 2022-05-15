@@ -8,8 +8,8 @@ A ReactJS Progressive Web Application with Firebase Authentication and Firestore
 *Michael Guldborg 2021*
 
 <p align="center">
-	<a href="https://achivement.michaelguldborg.dk">
-		https://achivement.michaelguldborg.dk
+	<a href="https://achievement.michaelguldborg.dk">
+		https://achievement.michaelguldborg.dk
 	</a>
 </p>
 
