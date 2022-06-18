@@ -2,6 +2,15 @@ import Project from "./project";
 
 
 export const projects: Project[] = [{
+    name: 'Complex Figure Test',
+    company: 'Private',
+    role: 'Fullstack/Flutter Developer',
+    url: 'https://github.com/MichaelGuldborg/complex-figure-test',
+    from: '2022',
+    to: '2022',
+    color: '#00d2ff',
+    gradient: 'linear-gradient(45deg,#00d2ff,#3a47d5)',
+},{
     name: 'Stronglift clone',
     company: 'Private',
     role: 'Fullstack/Flutter Developer',
