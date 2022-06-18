@@ -3,7 +3,7 @@ import Project from "./project";
 
 export const projects: Project[] = [{
     name: 'Complex Figure Test',
-    company: 'Private',
+    company: 'MSc Thesis',
     role: 'Fullstack/Flutter Developer',
     url: 'https://github.com/MichaelGuldborg/complex-figure-test',
     from: '2022',
