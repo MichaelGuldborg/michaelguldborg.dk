@@ -54,7 +54,7 @@ export const projects: Project[] = [{
     to: '2021',
     color: '#43c6ac',
     gradient: 'linear-gradient(45deg, #43c6ac, #f8ffae)',
-} {
+}, {
     name: 'Digitalt Tilgængelig',
     company: 'InnoSocial ApS',
     role: 'Fullstack/React Developer',
