@@ -25,7 +25,7 @@ export const LandingHero = () => {
                         </h1>
                         <p style={{maxWidth: 450, fontSize: 17, lineHeight: 1.5}}>
                             {'A passion for frontend development and DevOps engineering. ' +
-                                'Creating user friendly interfaces with scalable pipelines to continuously value users.'}
+                                'Creating user friendly interfaces with scalable pipelines to continuously deliver value to users.'}
                         </p>
                         <div style={{display: 'flex', marginTop: 32}}>
                             <ContactButton/>
