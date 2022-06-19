@@ -17,8 +17,8 @@ export const projects: Project[] = [{
     from: '2022',
     to: '2022',
     color: '#4b6cb7',
-    gradient: 'linear-gradient(45deg,#4b6cb7,#182848)',
-},{
+    gradient: 'linear-gradient(45deg, #284858, #5b7cc7)',
+}, {
     name: 'Stronglift Clone',
     company: 'Private',
     role: 'Fullstack/Flutter Developer',
@@ -53,7 +53,7 @@ export const projects: Project[] = [{
     from: '2021',
     to: '2021',
     color: '#43c6ac',
-    gradient: 'linear-gradient(45deg, #43c6ac, #f8ffae)',
+    gradient: 'linear-gradient(45deg, #43c6ac, #c8cf5e)',
 }, {
     name: 'Digitalt Tilgængelig',
     company: 'InnoSocial ApS',

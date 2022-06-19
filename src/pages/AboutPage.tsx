@@ -1,4 +1,4 @@
-import {Container, Grid, Hidden} from "@mui/material";
+import {Container, Grid} from "@mui/material";
 import React from "react";
 import projects from "../models/projects";
 
@@ -24,6 +24,7 @@ export const AboutPage = () => {
                         marginBottom: 64,
                     }}>
                         <img
+                            alt={'profile'}
                             src={'profile.jpg'}
                             style={{
                                 marginTop: 32,
