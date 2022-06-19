@@ -1,5 +1,13 @@
 import Project from "./project";
 
+// orange 
+// linear-gradient(45deg,#fbb13c,#ff4e50)
+// pink
+// linear-gradient(45deg, #fad0c4, #ffd1ff)
+// purple
+// linear-gradient(45deg, #a770ef, #cf8bf3, #fdb99b)
+// orange
+// linear-gradient(45deg, #ff4e50, #f9d423)
 
 export const projects: Project[] = [{
     name: 'Complex Figure Test',
@@ -8,8 +16,8 @@ export const projects: Project[] = [{
     url: 'https://github.com/MichaelGuldborg/complex-figure-test',
     from: '2022',
     to: '2022',
-    color: '#00d2ff',
-    gradient: 'linear-gradient(45deg,#00d2ff,#3a47d5)',
+    color: '#4b6cb7',
+    gradient: 'linear-gradient(45deg,#4b6cb7,#182848)',
 },{
     name: 'Stronglift clone',
     company: 'Private',
@@ -37,7 +45,16 @@ export const projects: Project[] = [{
     to: '2021',
     color: '#ffaf7b',
     gradient: 'linear-gradient(45deg, #d76d77, #ffaf7b)'
-}, {
+},{
+    name: 'Calendar Time',
+    company: 'Private',
+    role: 'React Developer',
+    url: 'https://github.com/MichaelGuldborg/CalendarTime',
+    from: '2021',
+    to: '2021',
+    color: '#43c6ac',
+    gradient: 'linear-gradient(45deg, #43c6ac, #f8ffae)',
+} {
     name: 'Digitalt Tilgængelig',
     company: 'InnoSocial ApS',
     role: 'Fullstack/React Developer',
