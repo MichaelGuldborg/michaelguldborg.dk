@@ -19,7 +19,7 @@ export const projects: Project[] = [{
     color: '#4b6cb7',
     gradient: 'linear-gradient(45deg,#4b6cb7,#182848)',
 },{
-    name: 'Stronglift clone',
+    name: 'Stronglift Clone',
     company: 'Private',
     role: 'Fullstack/Flutter Developer',
     url: 'https://github.com/MichaelGuldborg/stronglift-clone',
@@ -64,7 +64,7 @@ export const projects: Project[] = [{
     color: '#087ee1',
     gradient: 'linear-gradient(45deg,#087ee1,#00caa1)',
 }, {
-    name: 'Headspace admin',
+    name: 'Headspace Admin',
     company: 'InnoSocial ApS',
     role: 'Fullstack/React Developer',
     url: 'https://github.com/MichaelGuldborg/michaelguldborg.dk/tree/master/public/projects/headspace_admin',
