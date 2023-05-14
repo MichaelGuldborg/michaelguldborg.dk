@@ -10,10 +10,7 @@ export const AboutPage = () => {
             display: 'flex',
             alignItems: 'center',
         }}>
-
-
             <Container maxWidth={"lg"}>
-
                 <Grid container>
                     <Grid item xs={12} style={{
                         display: 'flex',

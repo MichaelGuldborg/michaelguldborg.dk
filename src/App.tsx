@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/contact/ContactPage";
 import {SnackbarProvider} from "notistack";
+import {PrivacyPolicyPage} from "./pages/privacy/PrivacyPolicyPage";
 
 //https://nmtl.dk/
 //https://lassedyrholm.dk/
@@ -22,8 +23,9 @@ function App() {
                     <Header/>
                     <Routes>
                         <Route path="/" element={<LandingPage/>}/>
-                        <Route path="about" element={<AboutPage/>}/>
-                        <Route path="contact" element={<ContactPage/>}/>
+                        <Route path="/about" element={<AboutPage/>}/>
+                        <Route path="/contact" element={<ContactPage/>}/>
+                        <Route path="/privacy" element={<PrivacyPolicyPage/>}/>
                     </Routes>
                     <Footer/>
                 </BrowserRouter>
