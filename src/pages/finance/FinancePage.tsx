@@ -123,7 +123,7 @@ export const PercentBar: React.FC<{ percent: number }> = ({percent}) => {
         <Box sx={{
             position: 'absolute',
             height: '100%',
-            width: `${percent * 100}%`,
+            width: `${Math.min(percent * 100, 100)}%`,
             background: theme.palette.success.light,
             borderTopLeftRadius: radius,
             borderBottomLeftRadius: radius,
