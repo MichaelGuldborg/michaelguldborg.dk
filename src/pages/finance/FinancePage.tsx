@@ -10,17 +10,14 @@ const toNumber = (s: string | undefined) => {
 export const FinancePage = () => {
 
     const [values, setValues] = useState({
-        currentBalance: '',
-        monthlyDeposit: '',
-        interestRate: '',
-        monthlyExpenses: ''
+        currentBalance: '100000',
+        monthlyDeposit: '10000',
+        interestRate: '0,05',
+        monthlyExpenses: '20000'
     });
     const onFieldChange = (e: ChangeEvent<HTMLInputElement>) => {
         setValues({...values, [e.target.name]: e.target.value})
     }
-
-    // x * rate = expense * 12
-
 
     const targetAmount = toNumber(values.monthlyExpenses) * 12 / toNumber(values.interestRate);
     const percent = toNumber(values.currentBalance) / targetAmount;
