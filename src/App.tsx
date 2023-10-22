@@ -7,6 +7,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/contact/ContactPage";
 import {SnackbarProvider} from "notistack";
 import {PrivacyPolicyPage} from "./pages/privacy/PrivacyPolicyPage";
+import FinancePage from "./pages/finance/FinancePage";
 
 //https://nmtl.dk/
 //https://lassedyrholm.dk/
@@ -23,6 +24,7 @@ function App() {
                     <Header/>
                     <Routes>
                         <Route path="/" element={<LandingPage/>}/>
+                        <Route path="/finance" element={<FinancePage/>}/>
                         <Route path="/about" element={<AboutPage/>}/>
                         <Route path="/contact" element={<ContactPage/>}/>
                         <Route path="/privacy" element={<PrivacyPolicyPage/>}/>
