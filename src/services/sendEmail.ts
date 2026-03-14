@@ -1,5 +1,5 @@
 
-const API_KEY = process.env.REACT_APP_SEND_GRID_API_KEY ?? '';
+const API_KEY = import.meta.env.VITE_SEND_GRID_API_KEY ?? '';
 export const sendEmail = ({to, from, subject, content}: {
     to: string, from: string, subject: string, content: string,
 }) => {
