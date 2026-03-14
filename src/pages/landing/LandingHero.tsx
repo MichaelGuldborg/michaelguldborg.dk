@@ -7,7 +7,6 @@ import {theme} from "../../constants/theme";
 export const LandingHero = () => {
     return (
         <div style={{
-            height: 600,
             display: 'flex',
             alignItems: 'center',
             backgroundColor: theme.colors.offWhite,

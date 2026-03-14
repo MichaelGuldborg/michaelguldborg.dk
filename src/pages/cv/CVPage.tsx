@@ -153,7 +153,8 @@ const CVPage = () => {
       }}>
         <Box sx={{
           bgcolor: 'white',
-          p: { xs: 3, md: 6 },
+          p: { xs: 3, md: 3 },
+          pt: { xs: 8, md: 8 },
           borderRadius: 2,
           boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
           position: 'relative',
@@ -166,8 +167,8 @@ const CVPage = () => {
           {/* Download Button */}
           <Box sx={{
             position: 'absolute',
-            top: { xs: '8px', md: '8px' },
-            right: { xs: '8px', md: '8px' },
+            top: { xs: '12px', md: '12px' },
+            right: { xs: '12px', md: '12px' },
             '@media print': { display: 'none' }
           }}>
             <Button
@@ -281,10 +282,10 @@ const CVPage = () => {
             </Grid>
           </Grid>
 
-          <Divider sx={{ my: 3 }} />
+          <Divider sx={{ my: 2 }} />
 
           {/* Summary */}
-          <Box sx={{ mb: 3 }}>
+          <Box sx={{ mb: 2 }}>
             <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: theme.colors.black }}>
               Professional Summary
             </Typography>
@@ -294,7 +295,7 @@ const CVPage = () => {
           </Box>
 
           {/* Experience */}
-          <Box sx={{ mb: 3 }}>
+          <Box sx={{ mb: 2 }}>
             <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: theme.colors.black }}>
               Work Experience
             </Typography>
@@ -339,7 +340,7 @@ const CVPage = () => {
           </Box>
 
           {/* Education */}
-          <Box sx={{ mb: 3 }}>
+          <Box sx={{ mb: 2 }}>
             <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: theme.colors.black }}>
               Education
             </Typography>
@@ -370,7 +371,7 @@ const CVPage = () => {
           </Box>
 
           {/* Skills */}
-          <Box sx={{ mb: 3 }}>
+          <Box sx={{ mb: 2}}>
             <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: theme.colors.black }}>
               Technical Skills
             </Typography>

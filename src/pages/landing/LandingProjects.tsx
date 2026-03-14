@@ -8,8 +8,7 @@ export const LandingProjects = () => {
     return (
 
         <Container maxWidth={"lg"} style={{
-            marginTop: 48,
-            marginBottom: 32* 3,
+            marginBottom: 32 * 3,
         }}>
             <h2 style={{
                 fontSize: 32,
