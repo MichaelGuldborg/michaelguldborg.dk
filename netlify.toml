@@ -1,6 +1,9 @@
 [build]
     command = "export CI=false && yarn build"
-    publish = "build"
+    publish = "dist"
+
+[build.environment]
+    NODE_VERSION = "22"
 
 [[headers]]
     for = "/*"
