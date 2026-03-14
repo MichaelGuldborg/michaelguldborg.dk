@@ -28,6 +28,11 @@ export const Header: React.FC = () => {
                         }}>
                             <Link to="about">About</Link>
                         </div>
+                        <div style={{
+                            marginRight: 32,
+                        }}>
+                            <Link to="cv">CV</Link>
+                        </div>
                         <div>
                             <ContactButton/>
                         </div>

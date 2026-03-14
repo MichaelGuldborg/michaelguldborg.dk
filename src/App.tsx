@@ -8,6 +8,7 @@ import ContactPage from "./pages/contact/ContactPage";
 import {SnackbarProvider} from "notistack";
 import {PrivacyPolicyPage} from "./pages/privacy/PrivacyPolicyPage";
 import FinancePage from "./pages/finance/FinancePage";
+import CVPage from "./pages/cv/CVPage";
 
 //https://nmtl.dk/
 //https://lassedyrholm.dk/
@@ -28,6 +29,7 @@ function App() {
                         <Route path="/about" element={<AboutPage/>}/>
                         <Route path="/contact" element={<ContactPage/>}/>
                         <Route path="/privacy" element={<PrivacyPolicyPage/>}/>
+                        <Route path="/cv" element={<CVPage/>}/>
                     </Routes>
                     <Footer/>
                 </BrowserRouter>
