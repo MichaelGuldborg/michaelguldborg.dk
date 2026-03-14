@@ -1,19 +1,24 @@
 import React from 'react';
-import { Container, Grid, Typography, Box, Divider, Chip, Link } from '@mui/material';
+import {Container, Grid, Typography, Box, Divider, Chip, Link, Stack, Button} from '@mui/material';
 import { theme } from '../../constants/theme';
 import MailLineIcon from 'remixicon-react/MailLineIcon';
 import MapPinLineIcon from 'remixicon-react/MapPinLineIcon';
 import GlobalLineIcon from 'remixicon-react/GlobalLineIcon';
 import LinkedinBoxFillIcon from 'remixicon-react/LinkedinBoxFillIcon';
+import GithubFillIcon from 'remixicon-react/GithubFillIcon';
+import PhoneLineIcon from 'remixicon-react/PhoneLineIcon';
+import DownloadLineIcon from 'remixicon-react/DownloadLineIcon';
 
 const data = {
   personalInfo: {
     name: "Michael Kaaberbøl Guldborg",
-    headline: "Full Stack Developer & Tech Lead | Fintech | React | NodeJS | DevOps | AWS",
+    headline: "Full Stack Developer & Tech Lead",
     location: "Copenhagen, Denmark",
     email: "mail@michaelguldborg.dk",
+    phone: "+45 21 13 13 91",
     website: "michaelguldborg.dk",
     linkedin: "linkedin.com/in/michael-guldborg",
+    github: "github.com/MichaelGuldborg",
     profileImage: "profile.jpg",
     languages: [
       { language: "Dansk", proficiency: "Native" },
@@ -25,29 +30,68 @@ const data = {
       "Passionate about creating user-friendly interfaces and scalable pipelines for continuous value delivery. Experienced in Fintech, AWS, and modern web architectures.",
   experience: [
     {
-      company: "Resurs",
-      role: "Full Stack Developer & Tech Lead",
-      period: "Present",
-      description: "Leading technical initiatives in the Fintech sector, focusing on React, NodeJS, and AWS cloud infrastructure."
+      company: "Resurs Bank AB",
+      role: "Senior Full Stack Developer",
+      contract: "Consultant",
+      period: "2024 - Present",
+      description: "Senior developer and consultant at Resurs Bank, driving technical excellence and modernization across the Onlinebank platform.",
+      bullets: [{
+        title: "Scrum master",
+        description: "Worked closely with the PO to refine and prioritize the product backlog, structuring the team’s workload and removing blockers before they hit development."
+      }, {
+        title: "European Accessibility Act",
+        description: "Defined the framework for updating and ensuring that the Onlinebank web app met the EAA regulatory requirements."
+      }, {
+        title: "CI/CD Modernization",
+        description: "Replaced legacy Jenkins pipelines with GitHub Actions, streamlining the deployment process and reducing build infrastructure overhead."
+      }, {
+        title: "Infrastructure Migration",
+        description: "Participated in the migration from on-premise servers to AWS (EKS/Kubernetes), ensuring zero downtime for all production services during the transition."
+      }],
+    },
+    {
+      company: "Resurs Bank AB",
+      contract: "Consultant",
+      role: "Lead Frontend Developer",
+      period: "2022 - 2024",
+      description: "Led the in-housing and successful launch of the new Onlinebank web application, building a robust frontend architecture and team.",
+      bullets: [{
+        title: "Launch Success",
+        description: "Led the transition of the Onlinebank web app from an external vendor to an in-house team, successfully launching the new platform to 600k+ monthly active users."
+      }, {
+        title: "Architectural Ownership",
+        description: "Selected the tech stack and designed the architecture for the in-house Onlinebank web application."
+      }, {
+        title: "Mobile App Overhaul",
+        description: "Took leadership of the transition from JavaScript to TypeScript for the mobile app project to improve stability and development speed."
+      }, {
+        title: "Knowledge Transfer",
+        description: "Led the effort to create an extensive feature documentation to help onboard new PO, managers, and developers"
+      }],
     },
     {
       company: "MKG Software ApS",
+      contract: "Owner",
       role: "Founder, Director & Owner",
       period: "2018 - Present",
-      description: "Founder and director of software consultancy company providing specialized development services in web, mobile, and DevOps."
+      description: "Founder and owner of MKG Software ApS based in Copenhagen.\n" +
+          "Working as a freelance contractor as a Senior Full Stack Developer and Software Architect.\n" +
+          "Technologies used: React, React-Native, Typescript, NodeJS, Flutter, Java, C#, GitHub workflows, AWS, Claude Code"
+    },
+    {
+      company: "InnoSocial ApS",
+      contract: "Partner",
+      role: "Software Developer",
+      period: "2019 - 2021",
+      description: "Coordinated a team of 5 developers and acted as both product owner and full stack developer. We developed and launched software projects like Headspace Admin, DiTi & DiKom focusing on administrative systems and counseling platforms."
     },
     {
       company: "MinEjendom",
+      contract: "Part Time",
       role: "Frontend Developer (Flutter)",
       period: "2018 - 2022",
       description: "Developed and maintained a social platform for apartment buildings. Focused on building a cross-platform mobile application using Flutter."
     },
-    {
-      company: "InnoSocial ApS",
-      role: "Software Developer",
-      period: "2019 - 2021",
-      description: "Contributed to projects like Headspace Admin and DiTi & DiKom, focusing on administrative systems and counseling platforms."
-    }
   ],
   education: [
     {
@@ -81,8 +125,8 @@ const data = {
     }
   ],
   skills: {
-    frontend: ["React", "TypeScript", "Flutter", "Material UI", "Emotion", "Vite"],
-    backend: ["Node.js", "C# .Net Core", "PostgreSQL", "MongoDB"],
+    frontend: ["React",'React-Native', "TypeScript", 'Tan-stack', "Flutter", "Material UI", "Emotion", "Vite"],
+    backend: ["Node.js", 'Java SpringBoot', "C# .Net Core", "PostgreSQL", "MongoDB", 'Firebase'],
     devops: ["AWS", "CI/CD", "Docker", "Terraform", "GitHub Actions"],
     other: ["Agile", "Fintech", "Product Management", "UI/UX Design"]
   }
@@ -90,16 +134,85 @@ const data = {
 
 const CVPage = () => {
   return (
-    <Box sx={{ bgcolor: theme.colors.backgroundGrey, minHeight: '100vh', pt: 12, pb: 8 }}>
-      <Container maxWidth="md">
-        <Box sx={{ bgcolor: 'white', p: { xs: 3, md: 6 }, borderRadius: 2, boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+    <Box sx={{
+      bgcolor: theme.colors.backgroundGrey,
+      minHeight: '100vh',
+      pt: 12,
+      pb: 8,
+      '@media print': {
+        bgcolor: 'white',
+        pt: 0,
+        pb: 0,
+      }
+    }}>
+      <Container maxWidth="md" sx={{
+        '@media print': {
+          maxWidth: 'none',
+          p: 0,
+        }
+      }}>
+        <Box sx={{
+          bgcolor: 'white',
+          p: { xs: 3, md: 6 },
+          borderRadius: 2,
+          boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
+          position: 'relative',
+          '@media print': {
+            boxShadow: 'none',
+            p: 0,
+            borderRadius: 0,
+          }
+        }}>
+          {/* Download Button */}
+          <Box sx={{
+            position: 'absolute',
+            top: { xs: '8px', md: '8px' },
+            right: { xs: '8px', md: '8px' },
+            '@media print': { display: 'none' }
+          }}>
+            <Button
+              variant="outlined"
+              startIcon={<DownloadLineIcon size={18} />}
+              onClick={() => window.print()}
+              sx={{
+                color: theme.colors.primary,
+                borderColor: theme.colors.lightBlue,
+                '&:hover': {
+                  borderColor: theme.colors.primary,
+                  bgcolor: theme.colors.lightBlue,
+                },
+                textTransform: 'none',
+                fontWeight: 600
+              }}
+            >
+              Download PDF
+            </Button>
+          </Box>
+
           {/* Header */}
-          <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={8}>
-              <Typography variant="h3" sx={{ fontWeight: 700, color: theme.colors.black, mb: 1 }}>
+          <Grid container spacing={4} alignItems="center" sx={{
+            '@media print': {
+              flexDirection: 'row',
+              flexWrap: 'nowrap',
+              alignItems: 'flex-start'
+            }
+          }}>
+            <Grid item xs={12} md={8} >
+              <Typography variant="h4" sx={{
+                fontWeight: 700,
+                color: theme.colors.black,
+                mb: 1,
+                '@media print': {
+                  fontSize: '2rem'
+                }
+              }}>
                 {data.personalInfo.name}
               </Typography>
-              <Typography variant="h6" sx={{ color: theme.colors.primary, fontWeight: 500, mb: 2 }}>
+              <Typography variant="h6" sx={{
+                color: theme.colors.primary,
+                fontWeight: 500,
+                mb: 2,
+              }}>
                 {data.personalInfo.headline}
               </Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
@@ -114,6 +227,12 @@ const CVPage = () => {
                   </Link>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: theme.colors.darkGrey }}>
+                  <PhoneLineIcon size={18} />
+                  <Link href={`tel:${data.personalInfo.phone.replace(/\s/g, '')}`} color="inherit" underline="hover">
+                    <Typography variant="body2">{data.personalInfo.phone}</Typography>
+                  </Link>
+                </Box>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: theme.colors.darkGrey }}>
                   <GlobalLineIcon size={18} />
                   <Link href={`https://${data.personalInfo.website}`} target="_blank" color="inherit" underline="hover">
                     <Typography variant="body2">{data.personalInfo.website}</Typography>
@@ -125,9 +244,24 @@ const CVPage = () => {
                     <Typography variant="body2">LinkedIn</Typography>
                   </Link>
                 </Box>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: theme.colors.darkGrey }}>
+                  <GithubFillIcon size={18} />
+                  <Link href={`https://${data.personalInfo.github}`} target="_blank" color="inherit" underline="hover">
+                    <Typography variant="body2">GitHub</Typography>
+                  </Link>
+                </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Grid item xs={12} md={4} sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              '@media print': {
+                width: '30%',
+                flexBasis: '30%',
+                maxWidth: '30%',
+                justifyContent: 'flex-end'
+              }
+            }}>
               <Box
                 component="img"
                 src={data.personalInfo.profileImage}
@@ -137,16 +271,20 @@ const CVPage = () => {
                   height: 150,
                   borderRadius: '50%',
                   objectFit: 'cover',
-                  border: `4px solid ${theme.colors.lightBlue}`
+                  border: `4px solid ${theme.colors.lightBlue}`,
+                  '@media print': {
+                    width: 120,
+                    height: 120
+                  }
                 }}
               />
             </Grid>
           </Grid>
 
-          <Divider sx={{ my: 4 }} />
+          <Divider sx={{ my: 3 }} />
 
           {/* Summary */}
-          <Box sx={{ mb: 4 }}>
+          <Box sx={{ mb: 3 }}>
             <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: theme.colors.black }}>
               Professional Summary
             </Typography>
@@ -156,20 +294,25 @@ const CVPage = () => {
           </Box>
 
           {/* Experience */}
-          <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 3, color: theme.colors.black }}>
+          <Box sx={{ mb: 3 }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: theme.colors.black }}>
               Work Experience
             </Typography>
             {data.experience.map((exp, index) => (
-              <Box key={index} sx={{ mb: 3 }}>
+              <Box key={index} sx={{ mb: 2 }}>
                 <Grid container justifyContent="space-between" alignItems="flex-start">
                   <Grid item xs={12} sm={8}>
                     <Typography variant="subtitle1" sx={{ fontWeight: 700, color: theme.colors.black }}>
                       {exp.role}
                     </Typography>
-                    <Typography variant="subtitle2" sx={{ color: theme.colors.primary, fontWeight: 600 }}>
-                      {exp.company}
-                    </Typography>
+                    <Stack direction="row" alignItems="center">
+                      <Typography variant="subtitle2" sx={{ color: theme.colors.primary, fontWeight: 600 }}>
+                        {exp.company}
+                      </Typography>
+                      <Typography variant="subtitle2" sx={{ color: theme.colors.textGrey, marginLeft: '4px', fontWeight: 600 }}>
+                        {exp.contract && `• ${exp.contract}`}
+                      </Typography>
+                    </Stack>
                   </Grid>
                   <Grid item xs={12} sm={4} sx={{ textAlign: { sm: 'right' } }}>
                     <Typography variant="body2" sx={{ color: theme.colors.textGrey, fontWeight: 500 }}>
@@ -177,16 +320,27 @@ const CVPage = () => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Typography variant="body2" sx={{ mt: 1, color: theme.colors.darkGrey, lineHeight: 1.6 }}>
+                <Typography variant="body2" sx={{ mt: 1, color: theme.colors.darkGrey, lineHeight: 1.6, whiteSpace: 'break-spaces' }}>
                   {exp.description}
                 </Typography>
+                {exp.bullets && (
+                  <Box component="ul" sx={{ mt: 1, pl: 2, color: theme.colors.darkGrey }}>
+                    {exp.bullets.map((bullet, bIndex) => (
+                      <Box component="li" key={bIndex} sx={{ mb: 0.5 }}>
+                        <Typography variant="body2" sx={{ color: theme.colors.darkGrey, lineHeight: 1.6 }}>
+                          <Box component="span" sx={{ fontWeight: 600, color: theme.colors.black }}>{bullet.title}:</Box> {bullet.description}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </Box>
+                )}
               </Box>
             ))}
           </Box>
 
           {/* Education */}
-          <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 3, color: theme.colors.black }}>
+          <Box sx={{ mb: 3 }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: theme.colors.black }}>
               Education
             </Typography>
             {data.education.map((edu, index) => (
@@ -216,7 +370,7 @@ const CVPage = () => {
           </Box>
 
           {/* Skills */}
-          <Box sx={{ mb: 4 }}>
+          <Box sx={{ mb: 3 }}>
             <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: theme.colors.black }}>
               Technical Skills
             </Typography>
