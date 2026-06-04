@@ -66,7 +66,7 @@ const data = {
                 description: "Selected the tech stack and designed the architecture for the in-house Onlinebank web application."
             }, {
                 title: "Mobile App Ownership",
-                description: "Assumed full ownership of the React Native mobile app — the primary customer-facing channel for 600k+ users — covering architecture, feature development, and day-to-day engineering decisions."
+                description: "Took on development ownership of the React Native mobile app covering architecture, feature development, and day-to-day engineering decisions."
             }, {
                 title: "Knowledge Transfer",
                 description: "Led the effort to create an extensive feature documentation to help onboard new PO, managers, and developers"
