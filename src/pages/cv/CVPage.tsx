@@ -26,7 +26,7 @@ const data = {
             {language: "German", proficiency: "Elementary"},
         ]
     },
-    summary: "Senior Full Stack Developer & Tech Lead specializing in React Web Development, React-Native/Flutter Mobile Development, and DevOps Engineering." +
+    summary: "Senior Full Stack Developer & Tech Lead specializing in React Web Development, React-Native/Flutter Mobile Development, and DevOps Engineering. " +
         "Passionate about creating user-friendly interfaces and scalable pipelines for continuous value delivery. Experienced in Fintech, AWS, and modern web architectures.",
     experience: [
         {
